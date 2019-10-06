@@ -1,0 +1,47 @@
+body {
+	background-image: url(images/accueil.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: white;
+}
+.login-card {
+	width: 280px;
+	height: 200px;
+	padding: 10px;
+	box-shadow: 0px 20px 30px rgba(0,0,0,0.5);
+	border-radius: 8px;
+	background: #EEEEEE;
+	position: absolute;
+	margin: auto;
+	top: 50%;
+	right: 0;
+	bottom: 50%;
+	left: 0;
+	text-align: center;
+}
+
+.btn-blue{
+	background-color: #000873;
+	box-shadow: 0px 20px 30px rgba(0,0,0,0.3);
+	color: white;
+	padding: 15px 20px;
+	border-radius: 4px;
+	transition: background-color 0.5s ease;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+}
+.login-btn {
+	margin: 30px 10px;
+}
+.btn-blue:hover {
+	background-color: #007BC3;
+	box-shadow: 0px 20px 30px rgba(0,0,0,0.4);
+	color: white;
+}
+h2 {
+	text-align: center;
+	margin-top: 100px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+	<title>Teambuilding</title>
+	<meta name="description" content="Activities">
+	<meta charset="utf-8">
+	<script src="https://kit.fontawesome.com/f554ec71bd.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="/style2.css">
+  <link rel="shortcut icon" type="image/png" href="/icon.png"/>
+
+
+
+</head>
+
+<body>
+<div class="banner">
+
+
+		<h1 class="title">Prochaine journée de Ligue 1</h1>
+
+
+</div>
+
+<div class="center">
+
+
+	<div class="table_title">
+
+	<%= @currentMatchday %>ème journée de L1
+
+	</div>
+
+
+
+	<% @matches.each do |match| %>
+		<div class="date">
+			<%=  match["utcDate"].slice(8..9)  %>/<%=  match["utcDate"].slice(5..6)  %>/<%=  match["utcDate"].slice(0..3)  %>
+		</div>
+			<div class="table">
+
+				<% homeTeam = @teams.find { |homeTeam| homeTeam["id"] == match["homeTeam"]["id"] } %>
+				<% awayTeam = @teams.find { |awayTeam| awayTeam["id"] == match["awayTeam"]["id"] } %>
+
+
+
+				<div class="home_team"><span class="helper"></span> <%= match["homeTeam"]["name"] %> </div>
+				<div class="logo2"><span class="helper"></span><img class="logo" src="<%= homeTeam["crestUrl"] %>"> </div>
+
+				<div <% if match["status"] == "FINISHED" %> class="line_finished" <%elsif match["status"] == "SCHEDULED" %> class="line" <%else%> class="line_live" <%end%>>
+
+
+					<% if match["status"] == "FINISHED" %>
+					<%= match["score"]["fullTime"]["homeTeam"] %> - <%= match["score"]["fullTime"]["awayTeam"] %>
+
+					<% elsif match["status"] == "SCHEDULED" %>
+					<%=  match["utcDate"].slice(11..15)  %>
+
+					<% elsif match["status"] == "IN_PLAY" %>
+					<%= match["score"]["halfTime"]["homeTeam"] %> - <%= match["score"]["halfTime"]["awayTeam"] %>
+
+					<%end%>
+
+
+				</div>
+
+				<div class="logo2"><span class="helper"></span><img class="logo" src="<%= awayTeam["crestUrl"] %>"> </div>
+				<div class="away_team"><span class="helper"></span> <%= match["awayTeam"]["name"] %> </div>
+
+
+			</div>
+
+	<%end%>
+</div>
+</body>
+
+</html>

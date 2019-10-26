@@ -1,0 +1,138 @@
+/* Importing Google fonts */
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700|Roboto:300,400,700");
+
+/* General style rules for fonts and colors */
+.table_title {
+  font-size: 20px;
+  margin: 20px;
+}
+.title {
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  padding-top: 0px;
+  margin-left: 250px;
+  margin-right: 250px;
+  justify-content: center;
+
+}
+body {
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  margin: 0px;
+  background-color: #F0F0F0;
+}
+
+.banner {
+	background-image: linear-gradient(-225deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("/images/banner.png");
+	color: white;
+	padding: 50px 0px;
+	background-size: cover;
+  background-position: center;
+  height: 30px;
+}
+
+.banner h1 {
+  font-size: 50px;
+  color: white;
+  position: flex;
+  margin: 0;
+}
+.banner h2 {
+	font-size: 30px;
+	font-weight: lighter;
+  opacity: 0.8;
+  color: white;
+}
+.table {
+  padding: 10px;
+  display: flex;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.line {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50px;
+  padding: 10px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.line_finished {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50px;
+  padding: 10px;
+  display: table-cell;
+  vertical-align: middle;
+  background-color: #545454;
+  color: white;
+  font-size: 18px;
+}
+.line_live{
+  margin-left: auto;
+  margin-right: auto;
+  width: 50px;
+  padding: 10px;
+  display: table-cell;
+  vertical-align: middle;
+  background-color: #d61e00;
+  color: white;
+  font-size: 18px;
+}
+.home_team {
+  width: 40%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+  font-weight: bold;
+}
+.away_team {
+  width: 40%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  font-weight: bold;
+}
+.logo {
+  max-width: 20px;
+  min-width: 20px;
+  vertical-align: middle;
+}
+.logo2 {
+  white-space: nowrap;
+  text-align: center;
+  margin: 1em 0;
+  max-width: 20px;
+  min-width: 20px;
+  margin: 3px;
+}
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.date {
+  text-align: left;
+  background-color: #f5f5f5;
+  margin-right: 300px;
+  margin-left: 300px;
+  font-size: 12px;
+  padding-left: 60px;
+}
+.center {
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid;
+  border: 1px solid;
+  border-color: #9A9A9A;
+  width: 80% ;
+  text-align: center;
+  background-color: white;
+  margin-bottom: 100px;
+}
